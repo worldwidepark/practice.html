@@ -7,6 +7,34 @@
 </head>
 
 <body>
+<script>
+    function nightdayhandler(self){
+    var target= document.querySelector('body') 
+        if(self.value ==='night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value ='day';
+       
+        var alist = document.querySelectorAll('a');
+        var i = 0
+        while(i<alist.length){
+        alist[i].style.color = 'powderblue';
+        i=i+1;
+        }
+    
+        }else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value ='night';
+        var alist = document.querySelectorAll('a');
+        var i = 0
+        while(i<alist.length){
+        alist[i].style.color = 'blue';
+        i=i+1;
+    }
+}
+}
+</script>
 
 <h1>WEB</h1>
 <input type='button' value='night' onclick="
@@ -34,30 +62,7 @@ document.querySelector('li').style.color = 'black';
 ">
 
 <input type="button" value="night" onclick="
-var target= document.querySelector('body') 
-    if(this.value ==='night'){
-    target.style.backgroundColor = 'black';
-    target.style.color = 'white';
-    this.value ='day';
-   
-    var alist = document.querySelectorAll('a');
-    var i = 0
-    while(i<alist.length){
-    alist[i].style.color = 'powderblue';
-    i=i+1;
-    }
-
-    }else{
-    target.style.backgroundColor = 'white';
-    target.style.color = 'black';
-    this.value ='night';
-    var alist = document.querySelectorAll('a');
-    var i = 0
-    while(i<alist.length){
-    alist[i].style.color = 'blue';
-    i=i+1;
-}
-    }
+nightdayhandler(this);
 ">
 
 <!--중복하는 건 전부 쫒아가서 변수처리해서 간결하게 하라-->

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>WEB1 -html</title>
+    <meta charset="utf-8"> <!-- utf-8로 읽으라-->
+    <link rel= "stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+    function setColor(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0
+        while(i<alist.length){
+        alist[i].style.color = color;
+        i=i+1;
+    }
+    }
+
+    function bodysetcolor(color){
+        document.querySelector('body').style.color = color;
+    }
+
+    function bodysetbackgroundcolor(color){
+        document.querySelector('body').style.backgroundColor = color;
+    }
+
+    function nightdayhandler(self){
+        var target= document.querySelector('body') 
+            if(self.value ==='night'){
+            bodysetbackgroundcolor('black');
+            bodysetcolor('white');
+            self.value ='day';
+            setColor('powderblue')
+    
+        }
+        else{
+        bodysetbackgroundcolor('white');
+        bodysetcolor('black');
+        self.value ='night';
+        
+        setColor('blue')
+    }
+}
+</script>
+
+<h1>WEB</h1>
+
+
+<input type="button" value="night" onclick="
+nightdayhandler(this);
+">
+
+<!--중복하는 건 전부 쫒아가서 변수처리해서 간결하게 하라-->
+
+<div ID="grid">
+<ol> <!-- ordered list--> 
+    <li><a href="1.html" >HTML</a></li>
+    <li><a href="2.html" >CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+</ol>
+</div>
+<h2>what is web?</h2>
+
+
+
+
+
+
+
+</body>
+
