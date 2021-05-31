@@ -16,27 +16,29 @@
         i=i+1;
     }
     }
-
-    function bodysetcolor(color){
-        document.querySelector('body').style.color = color;
+    var Body = {
+        setColor:function(color){
+            document.querySelector('body').style.color = color;
+        },
+        setbackgroundcolor:function(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
     }
 
-    function bodysetbackgroundcolor(color){
-        document.querySelector('body').style.backgroundColor = color;
-    }
+
 
     function nightdayhandler(self){
         var target= document.querySelector('body') 
             if(self.value ==='night'){
-            bodysetbackgroundcolor('black');
-            bodysetcolor('white');
+            Body.setbackgroundcolor('black');
+            Body.setColor('white');
             self.value ='day';
             setColor('powderblue')
     
         }
         else{
-        bodysetbackgroundcolor('white');
-        bodysetcolor('black');
+        Body.setbackgroundcolor('white');
+        Body.setColor('black');
         self.value ='night';
         
         setColor('blue')
