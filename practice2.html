@@ -1,58 +1,19 @@
-<!doctype html>
 <html>
+    
 <head>
     <title>WEB1 -html</title>
     <meta charset="utf-8"> <!-- utf-8로 읽으라-->
     <link rel= "stylesheet" href="style.css">
-</head>
+
 
 <body>
-<script>
-    function setColor(color){
-        var alist = document.querySelectorAll('a');
-        var i = 0
-        while(i<alist.length){
-        alist[i].style.color = color;
-        i=i+1;
-    }
-    }
-    var Body = {
-        setColor:function(color){
-            document.querySelector('body').style.color = color;
-        },
-        setbackgroundcolor:function(color){
-            document.querySelector('body').style.backgroundColor = color;
-        }
-    }
-
-
-
-    function nightdayhandler(self){
-        var target= document.querySelector('body') 
-            if(self.value ==='night'){
-            Body.setbackgroundcolor('black');
-            Body.setColor('white');
-            self.value ='day';
-            setColor('powderblue')
-    
-        }
-        else{
-        Body.setbackgroundcolor('white');
-        Body.setColor('black');
-        self.value ='night';
-        
-        setColor('blue')
-    }
-}
-</script>
-
+<script src='color.js'></script>
+</head>
 <h1>WEB</h1>
 
 
 <input type="button" value="night" onclick="
-nightdayhandler(this);
-">
-
+nightdayhandler(this);">
 <!--중복하는 건 전부 쫒아가서 변수처리해서 간결하게 하라-->
 
 <div ID="grid">
@@ -72,3 +33,4 @@ nightdayhandler(this);
 
 </body>
 
+</html>
